@@ -18,6 +18,7 @@ class Patterns {
     }
 
     public static void main(String[] args) {
+        // int n = 5;
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         in.close();
@@ -39,6 +40,7 @@ class Patterns {
         p16(n);
         p17(n);
         p18(n);
+        p19(n);
     }
 
     static void p1(int n) {
@@ -402,6 +404,7 @@ class Patterns {
                 Thread.sleep(75);
             }
             System.out.println();
+            Thread.sleep(75);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
@@ -467,6 +470,8 @@ class Patterns {
                 System.out.println();
                 Thread.sleep(75);
             }
+            System.out.println();
+            Thread.sleep(75);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
@@ -504,6 +509,55 @@ class Patterns {
                         if (j < n - (i - 5) - 1) {
                             System.out.print(" ");
                         } else {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        }
+                    }
+                }
+                System.out.println();
+                Thread.sleep(75);
+            }
+            System.out.println();
+            Thread.sleep(75);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static void p19(int n) {
+        try {
+            System.out.println("Pattern No: 19");
+            for (int i = 0; i < 2 * n; i++) {
+                if (i < n) {
+                    for (int j = 0; j < n; j++) {
+                        if (j <= i) {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        } else
+                            System.out.print(" ");
+                    }
+                    for (int j = 0; j < n; j++) {
+                        if (j < n - i - 1)
+                            System.out.print(" ");
+                        else {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        }
+                    }
+                } else {
+                    if (i == 5)
+                        i++;
+                    for (int j = 0; j < n; j++) {
+                        if (j < n - (i - 5)) {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        } else
+                            System.out.print(" ");
+                    }
+                    for (int j = 0; j < n; j++) {
+                        if (j < i - 5)
+                            System.out.print(" ");
+                        else {
                             System.out.print("*");
                             Thread.sleep(75);
                         }
