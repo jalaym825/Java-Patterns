@@ -18,27 +18,26 @@ class Patterns {
     }
 
     public static void main(String[] args) {
-        // Scanner in = new Scanner(System.in);
-        // int n = in.nextInt();
-        // in.close();
-        int n = 5;
-        // p1(n);
-        // p2(n);
-        // p3(n);
-        // p4(n);
-        // p5(n);
-        // p6(n);
-        // p7(n);
-        // p8(n);
-        // p9(n);
-        // p10(n);
-        // p11(n);
-        // p12(n);
-        // p13(n);
-        // p14(n);
-        // p15(n);
-        // p16(n);
-        // p17(n);
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        in.close();
+        p1(n);
+        p2(n);
+        p3(n);
+        p4(n);
+        p5(n);
+        p6(n);
+        p7(n);
+        p8(n);
+        p9(n);
+        p10(n);
+        p11(n);
+        p12(n);
+        p13(n);
+        p14(n);
+        p15(n);
+        p16(n);
+        p17(n);
         p18(n);
     }
 
