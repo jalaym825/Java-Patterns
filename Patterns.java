@@ -41,6 +41,12 @@ class Patterns {
         p17(n);
         p18(n);
         p19(n);
+        p20(n);
+        p21(n);
+        p22(n);
+        p23(n);
+        p24(n);
+        p25(n);
     }
 
     static void p1(int n) {
@@ -506,7 +512,7 @@ class Patterns {
                             System.out.print(" ");
                     }
                     for (int j = 0; j < n; j++) {
-                        if (j < n - (i - 5) - 1) {
+                        if (j < n - (i - n) - 1) {
                             System.out.print(" ");
                         } else {
                             System.out.print("*");
@@ -515,7 +521,6 @@ class Patterns {
                     }
                 }
                 System.out.println();
-                Thread.sleep(75);
             }
             System.out.println();
             Thread.sleep(75);
@@ -527,7 +532,7 @@ class Patterns {
     static void p19(int n) {
         try {
             System.out.println("Pattern No: 19");
-            for (int i = 0; i < 2 * n; i++) {
+            for (int i = 0; i < 2 * n - 1; i++) {
                 if (i < n) {
                     for (int j = 0; j < n; j++) {
                         if (j <= i) {
@@ -545,17 +550,15 @@ class Patterns {
                         }
                     }
                 } else {
-                    if (i == 5)
-                        i++;
                     for (int j = 0; j < n; j++) {
-                        if (j < n - (i - 5)) {
+                        if (j < n - (i - n) - 1) {
                             System.out.print("*");
                             Thread.sleep(75);
                         } else
                             System.out.print(" ");
                     }
                     for (int j = 0; j < n; j++) {
-                        if (j < i - 5)
+                        if (j < i - (n - 1))
                             System.out.print(" ");
                         else {
                             System.out.print("*");
@@ -564,8 +567,181 @@ class Patterns {
                     }
                 }
                 System.out.println();
-                Thread.sleep(75);
             }
+            System.out.println();
+            Thread.sleep(75);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static void p20(int n) {
+        try {
+            System.out.println("Pattern No: 20");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n - 1; j++) {
+                    if (i == 0 || i == n - 1 || j == 0 || j == n - 2) {
+                        System.out.print("*");
+                        Thread.sleep(75);
+                    } else
+                        System.out.print(" ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+            Thread.sleep(75);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static void p21(int n) {
+        try {
+            System.out.println("Pattern No: 21");
+            int temp = 1;
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j <= i; j++) {
+                    System.out.printf("%-3d", temp);
+                    Thread.sleep(75);
+                    temp++;
+                }
+                System.out.println();
+            }
+            System.out.println();
+            Thread.sleep(75);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static void p22(int n) {
+        try {
+            System.out.println("Pattern No: 22");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j <= i; j++) {
+                    if (i % 2 == 0) {
+                        if (j % 2 == 0)
+                            System.out.print("1 ");
+                        else
+                            System.out.print("0 ");
+                    } else {
+                        if (j % 2 == 0)
+                            System.out.print("0 ");
+                        else
+                            System.out.print("1 ");
+                    }
+                    Thread.sleep(75);
+                }
+                System.out.println();
+            }
+            System.out.println();
+            Thread.sleep(75);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static void p23(int n) {
+        try {
+            System.out.println("Pattern No: 23");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (j < n - i && j == n - i - 1) {
+                        System.out.print("*");
+                        Thread.sleep(75);
+                    } else
+                        System.out.print(" ");
+                }
+                for (int j = 1; j < n; j++) {
+                    if (i == j) {
+                        System.out.print("*");
+                        Thread.sleep(75);
+                    } else
+                        System.out.print(" ");
+                }
+                for (int j = 1; j < n; j++) {
+                    if (j < n - i && j == n - i - 1) {
+                        System.out.print("*");
+                        Thread.sleep(75);
+                    } else
+                        System.out.print(" ");
+                }
+                for (int j = 1; j < n; j++) {
+                    if (i == j) {
+                        System.out.print("*");
+                        Thread.sleep(75);
+                    } else
+                        System.out.print(" ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+            Thread.sleep(75);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static void p24(int n) {
+        try {
+            System.out.println("Pattern No: 24");
+            for (int i = 0; i < 2 * n; i++) {
+                if (i < n) {
+                    for (int j = 0; j < n; j++) {
+                        if (j <= i && (i == j || j == 0)) {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        } else
+                            System.out.print(" ");
+                    }
+                    for (int j = 0; j < n; j++) {
+                        if (j == n - 1 || j == n - i - 1) {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        } else
+                            System.out.print(" ");
+                    }
+                } else {
+                    for (int j = 0; j < n; j++) {
+                        if (j <= n - (i - n) - 1 && (j == 0 || j == 2 * n - i - 1)) {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        } else
+                            System.out.print(" ");
+                    }
+                    for (int j = 0; j < n; j++) {
+                        if (j >= (i - n) && (j == n - 1 || j == i - n)) {
+                            System.out.print("*");
+                            Thread.sleep(75);
+                        } else
+                            System.out.print(" ");
+
+                    }
+                }
+                System.out.println();
+            }
+            System.out.println();
+            Thread.sleep(75);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    static void p25(int n) {
+        try {
+            System.out.println("Pattern No: 25");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < 2 * n - 1; j++) {
+                    if ((i == 0 && j >= n) || (i == n - 1 && j < n) || (j == n - i - 1) || (j == 2 * n - 2 - i)) {
+                        System.out.print("*");
+                        Thread.sleep(75);
+                    } else
+                        System.out.print(" ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+            Thread.sleep(75);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
